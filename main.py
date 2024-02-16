@@ -70,7 +70,7 @@ def seatfinding(takenSeats):
             if sarr[i][j] == 0:
                 block.append(str(i*8+1+j))                
     cBlock = ", ".join(block)
-    print('Many taken seats from ' + str(lowestS) + 'to' + str(highestS) + ' but there is/are free seats in the middle ' + cBlock)
+    print('Many taken seats from ' + str(lowestS) + ' to ' + str(highestS) + ' but there is/are free seats in the middle ' + cBlock)
 
 if __name__ == "__main__":
     takenSeats = filehandling()
