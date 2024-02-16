@@ -1,11 +1,11 @@
 import math
 import numpy as np
-takenSeats = []
 
-def filehandling(takenSeats):
+
+def filehandling():
     with open("C:\\Users\\Adisi\\Downloads\\airportProject\\airportProblem\\input.txt", "r") as file:
         takenSeats = file.readlines() 
-    seatfinding(takenSeats)
+    return takenSeats
     
 def seatfinding(takenSeats):
     sarr = np.zeros((128,8), dtype=int)
@@ -73,4 +73,5 @@ def seatfinding(takenSeats):
     print('Many taken seats from ' + str(lowestS) + 'to' + str(highestS) + ' but there is/are free seats in the middle ' + cBlock)
 
 if __name__ == "__main__":
-    filehandling(takenSeats)
+    takenSeats = filehandling()
+    seatfinding(takenSeats)
